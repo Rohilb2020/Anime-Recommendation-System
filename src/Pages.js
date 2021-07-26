@@ -36,14 +36,14 @@ function Pages({ username }) {
     };
 
     // var date = null;
-    const [date,setDate] = useState("");
-    const [date_to,setDateTo] = useState("");
-    const [air,setAir] = useState({});
+    const [date, setDate] = useState("");
+    const [date_to, setDateTo] = useState("");
+    const [air, setAir] = useState({});
 
     // var month = null;
     // var month_to = null;
-    const [month,setMonth] = useState("");
-    const [month_to,setMonthTo] = useState("");
+    const [month, setMonth] = useState("");
+    const [month_to, setMonthTo] = useState("");
     console.log("1" + month);
     console.log("2" + month_to);
 
@@ -78,22 +78,30 @@ function Pages({ username }) {
                             setAir(animes.aired);
                             console.log(air.from);
 
-                            setDate(new Date(
-                                response.data.aired.prop.from.year,
-                                response.data.aired.prop.from.month - 1,
-                                response.data.aired.prop.from.day
-                            ));
-                            setDateTo(new Date(
-                                response.data.aired.prop.to.year,
-                                response.data.aired.prop.to.month - 1,
-                                response.data.aired.prop.to.day
-                            ));
-                            setMonth(date.toLocaleString("default", {
-                                month: "long",
-                            }));
-                            setMonthTo(date_to.toLocaleString("default", {
-                                month: "long",
-                            }));
+                            setDate(
+                                new Date(
+                                    response.data.aired.prop.from.year,
+                                    response.data.aired.prop.from.month - 1,
+                                    response.data.aired.prop.from.day
+                                )
+                            );
+                            setDateTo(
+                                new Date(
+                                    response.data.aired.prop.to.year,
+                                    response.data.aired.prop.to.month - 1,
+                                    response.data.aired.prop.to.day
+                                )
+                            );
+                            setMonth(
+                                date.toLocaleString("default", {
+                                    month: "long",
+                                })
+                            );
+                            setMonthTo(
+                                date_to.toLocaleString("default", {
+                                    month: "long",
+                                })
+                            );
                             console.log("1" + month);
                             console.log("2" + month_to);
                         },
@@ -141,7 +149,7 @@ function Pages({ username }) {
     return (
         <>
             {/* <Nav username={username} /> */}
-            <Nav />
+            <Nav className="nav_bar" />
             <div className="page_body">
                 {animes ? (
                     <div id="poster_container">
@@ -171,7 +179,9 @@ function Pages({ username }) {
                         <p className="statistics_heading">Start Date</p>
                         {animes?.aired?.prop?.from?.day ? (
                             <span>
-                                {animes.aired.prop.from.day}/{animes.aired.prop.from.month}{"/"}
+                                {animes.aired.prop.from.day}/
+                                {animes.aired.prop.from.month}
+                                {"/"}
                                 {animes.aired.prop.from.year}
                             </span>
                         ) : (
@@ -183,7 +193,9 @@ function Pages({ username }) {
                         <p className="statistics_heading">End Date</p>
                         {animes?.aired?.prop?.to?.day ? (
                             <span>
-                                {animes.aired.prop.to.day}/{animes.aired.prop.to.month}{"/"}
+                                {animes.aired.prop.to.day}/
+                                {animes.aired.prop.to.month}
+                                {"/"}
                                 {animes.aired.prop.to.year}
                             </span>
                         ) : (

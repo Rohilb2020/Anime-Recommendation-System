@@ -2,6 +2,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 body {
     background: #f2f2f2;
+    /* background-image: linear-gradient(
+        to right bottom,
+        #40e0d0,
+        #28c4c5,
+        #24a7b6,
+        #2d8ca1,
+        #347188,
+        #39687e,
+        #3c6073,
+        #3e5868,
+        #455f6c,
+        #4c6571,
+        #546c75,
+        #5c727a
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
 }
 .movie_container {
     position: absolute;

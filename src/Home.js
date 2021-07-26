@@ -34,6 +34,7 @@ function Home({ username }) {
     };
 
     useEffect(() => {
+        // $("body").css("background-image", "none");
         const getan = async () => {
             //Top anime
             $.ajax({
@@ -103,7 +104,7 @@ function Home({ username }) {
                     method: "get",
                     data: {
                         q: req_data,
-                        // rating: "pg",
+                        rating: "g",
                     },
                     success: function (responses) {
                         // console.log(responses);
