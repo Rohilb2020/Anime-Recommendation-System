@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+# About the Project
+A web application built using react, jQuery, firebase(as authentication and database service)on which users can search for animes and
+get all the latest details regarding that. Users also get similar recommendations for
+each anime they search. 
+
 ## Available Scripts
 
 In the project directory, you can run:
